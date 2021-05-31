@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from typing import NamedTuple
 
-FILE_PATH = r'C:\Users\Alex\Google Drive\Exams final project_ evidence folder\Secondary school FOI data\Secondary school assessment policies v 27-05-21 csv.csv'
+FILE_PATH = 'FILE_PATH_TO_CSV_FILE_GOES_HERE'
 
 
 def GetFile() -> pd.DataFrame:
