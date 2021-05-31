@@ -23,7 +23,8 @@ class AnalysedData(NamedTuple):
 def SchoolsWhoResponded(df: pd.DataFrame) -> AnalysedData:
 	"""
 	Filter out the schools who either didn't respond or are a special school.
-	Get back a NamedTuple with a database of the remaining schools, a row count of that DataFrame, and some statistics on the data
+	Get back a NamedTuple with a database of the remaining schools, a row count of that DataFrame, and some statistics on the data.
+	-1 was used to indicate "Not Applicable" in the spreadsheet, so those values will need to be filtered out.
 	"""
 
 	schools_who_responded = df.loc[(df['Response received?'] == 1) & (df['Response refused?'] != 0) & (df['Special school?'] != 1)]
